@@ -1,5 +1,5 @@
 # Stock Sentiment Analysis
-![image]()
+![image](https://github.com/AbsIbs/stock_sentiment_analysis/raw/main/images/sa_business_statement.png)
 
 ## Table of Contents
 - <a href="#business-case">Business Case</a>
@@ -39,10 +39,11 @@ The classification model has been deployed onto a simple [webapp]() where the us
 - The dataset is **unbalanced**
 - The tweets are in **english**
 - It contains near 6000 tweets with 63% classified as positive sentiments and 37% classified as negative
-- ![image]()
+<br><br>
+![image](https://github.com/AbsIbs/stock_sentiment_analysis/raw/main/images/dataset.png)
 
 ## Methodology
-![image]()
+![image](https://github.com/AbsIbs/stock_sentiment_analysis/raw/main/images/sa_methodology.png)
 <br><br>
 The methodology follows the general steps of text preprocessing for NLP modelling.
 - Lowercasing
@@ -57,11 +58,11 @@ For this project, the vectorization technique used is a **simple count vectorize
 ## Exploratory Data Analysis
 For the EDA, focus was given to constructing word clouds. This gives a visual representation of the distribution of words used for positive and negative sentiments.
 
-![image]()
+![image](https://github.com/AbsIbs/stock_sentiment_analysis/raw/main/images/positive_word_cloud.png)
 <br><br>
 From the image, we see that words such as ‘buy, long and break’ were most common for positive sentiments. 
 
-![image]()
+![image](https://github.com/AbsIbs/stock_sentiment_analysis/raw/main/images/negative_word_cloud.png)
 <br><br>
 In contrast, words such as ‘coronavirus, sell and stop’ were very common in negative sentiments.
 
@@ -83,7 +84,7 @@ Whilst our project records the following 4 metrics:
 the main focus is going to be on **Accuracy**.
 
 ## Model Performance
-![image]()
+![image](https://github.com/AbsIbs/stock_sentiment_analysis/raw/main/images/results.png)
 <br><br>
 As we see, our best performing model was a tuned gradient boosting model with an accuracy score of **73%**.
 <br><br>
@@ -97,10 +98,9 @@ As we see, our best performing model was a tuned gradient boosting model with an
 |              Random_Forest 	|         0.67 	|       0.70 	|          0.77 	|   0.72 	|
 |         Logistic_regresion 	|         0.66 	|       0.68 	|          0.76 	|   0.72 	|
 
-<br>
 We can further examine our best model by plotting a **confusion matrix**.
 <br><br>
-![image]()
+![image](https://github.com/AbsIbs/stock_sentiment_analysis/raw/main/images/cm.png)
 <br><br>
 Overall, we wish to minimize both our false positives and false negatives. For our best model, we can see values of 16% and 9% respectively. It appears that the model is better at predicting negative tweets as opposed to positive ones.
 
