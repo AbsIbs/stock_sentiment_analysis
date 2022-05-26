@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib
+seaborn
+nltk
+sklearn
+scipy
+collections
+PIL
+wordcloud
+gensim
+optuna
