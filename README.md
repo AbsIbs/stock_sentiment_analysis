@@ -30,9 +30,9 @@ pip: -r requirements.txt
 ```
 
 ## Demo and Usage
-The classification model has been deployed onto a simple [webapp]() where the user can type out the tweet and be advised on whether or not the tweet is a positve/negative sentiment.
+The classification model has been deployed onto a simple [webapp](https://absibs-sentiment-analysis.herokuapp.com/) where the user can type out the tweet and be advised on whether or not the tweet is a positve/negative sentiment.
 <br><br>
-![image]()
+![image](https://github.com/AbsIbs/stock_sentiment_analysis/raw/main/images/webapp.png)
 
 ## Dataset
 - The dataset was retrieved from [Kaggle](https://www.kaggle.com/code/adeyoyintemidayo/stock-data-eda-and-prediction/data).
