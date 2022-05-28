@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div class="container">
+            <div class="leftSection">
+                <div style="display: flex; flex-direction: row; gap: 1rem; align-items: center;">
+                    <img src="../static/img/logo.png" alt="" style="height: 3rem; width: 3rem;">
+                    <span style="font-weight: bold; font-size: 2rem;">Xero</span>
+                </div>
+                <div style="font-size: 3rem; font-weight: bold;">
+                    Drive Investment Decisions Using Machine Learning And NLP
+                </div>
+                <div style="border-left: 2px #E3070B solid; color: black; padding: 0.5rem 1rem 0.5rem; line-height: 150%;">
+                    Xero is a new platform that conducts sentiment analysis on tweets related to stocks.
+                    In other words, we take the tweet and analyse it to determine whether the sentiment is <span style="font-weight: bold">positve</span> or <span style="font-weight: bold;">negative</span>.
+                </div>
+                <form action="">
+                    <input type="text" id="corpus" name="corpus" style="flex: 4; border: none; padding: 0 1rem 0;">
+                    <button type="button" class="btn btn-primary" style="flex: 1; background-color: #E3070B; border: none; font-weight: bold;" onclick="callback()">Predict</button>
+                </form>
+            </div>
+            <div class="rightSection">
+                <div>
+                    <img src="../static/img/office worker.png" alt="" style="width: 25vw;">
+                </div>
+                <div class="rectangleContainer"> 
+                    <div>
+                        <img src="../static/img/twitterLogo.png" alt="" style="height: 50px; width: 50px;">
+                        <div style="font-weight: bold; text-align: center;">
+                            Analyse tweets about stocks
+                        </div>
+                    </div>
+                    <div>
+                        <img src="../static/img/aiLogo.png" alt="" style="height: 50px; width: 50px;">
+                        <div style="font-weight: bold; text-align: center;">
+                            Powered by machine learning
+                        </div>
+                    </div>
+                    <div>
+                        <img src="../static/img/accuracy.png" alt="" style="height: 50px; width: 50px;">
+                        <div style="font-weight: bold; text-align: center;">
+                            73% model accuracy
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    async function callback() {
+        let corpus = document.getElementById('corpus').value;
+        let response = await fetch("/callback/predict?data=" + corpus);
+        if (response.ok) {
+            var prediction = await response.json()['prediction']
+            alert(prediction)
+        }
+        else {
+            alert("HTTP-Error: " + response.status + "on predict");
+        }
+    }
+</script>
+</html>
