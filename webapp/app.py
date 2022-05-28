@@ -2,7 +2,6 @@ from flask import Flask, render_template, request
 import json
 import pickle
 from nltk.tokenize import RegexpTokenizer
-from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from nltk.stem.wordnet import WordNetLemmatizer
 import re
